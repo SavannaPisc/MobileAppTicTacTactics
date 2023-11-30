@@ -1,0 +1,13 @@
+current directory: /Users/kevin1222/Desktop/SAIT/202309_Fall/CPRG-303-F_MobileAppDev/GPs/Project Phase 4/GP4_TicTacToeGame/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+/Users/kevin1222/.rbenv/versions/2.7.4/bin/ruby -I /Users/kevin1222/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231129-47073-1is535b.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kevin1222/Desktop/SAIT/202309_Fall/CPRG-303-F_MobileAppDev/GPs/Project Phase 4/GP4_TicTacToeGame/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/kevin1222/Desktop/SAIT/202309_Fall/CPRG-303-F_MobileAppDev/GPs/Project Phase 4/GP4_TicTacToeGame/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/kevin1222/Desktop/SAIT/202309_Fall/CPRG-303-F_MobileAppDev/GPs/Project Phase 4/GP4_TicTacToeGame/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR=" install

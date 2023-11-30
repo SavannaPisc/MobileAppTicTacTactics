@@ -1,6 +1,0 @@
-module Pods_GP4_TicTacToeGame_GP4_TicTacToeGameTests {
-  umbrella header "Pods-GP4_TicTacToeGame-GP4_TicTacToeGameTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
