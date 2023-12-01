@@ -19,7 +19,7 @@ const HomeScreen = ({navigation}) => {
   };
 
   const handleSetting = () => {
-    navigation.navigate('Setting');
+    navigation.navigate('Settings');
   };
 
   return (
@@ -35,7 +35,7 @@ const HomeScreen = ({navigation}) => {
         <Button
           color="#000"
           style={Styles.button}
-          title="Setting"
+          title="Settings"
           onPress={handleSetting}
         />
         <Button

@@ -12,7 +12,7 @@ import Styles from '../layout/Styles';
 const Setting = () => {
   return (
     <View style={Styles.container}>
-      <Text style={Styles.text}>🚧 Under Construction 🚧</Text>
+      <Text style={Styles.text}>🚧 Building in progress 🚧</Text>
     </View>
   );
 };
