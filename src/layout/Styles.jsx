@@ -42,7 +42,6 @@ const Styles = StyleSheet.create({
   squareText: {
     fontSize: 50,
   },
-  button: {},
 });
 
 export default Styles;

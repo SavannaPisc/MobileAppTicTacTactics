@@ -23,26 +23,28 @@ const HomeScreen = ({navigation}) => {
   };
 
   return (
-    <View style={Styles.container}>
-      <Text style={Styles.title}>Tic Tac Toe Game</Text>
-      <Button
-        color="#000"
-        style={Styles.button}
-        title="Start Game"
-        onPress={handleStartGame}
-      />
-      <Button
-        color="#000"
-        style={Styles.button}
-        title="Setting"
-        onPress={handleSetting}
-      />
-      <Button
-        color="#000"
-        style={Styles.button}
-        title="About Us"
-        onPress={handleAboutUs}
-      />
+    <View style={[Styles.container, {marginHorizontal: 20}]}>
+      <Text style={Styles.title}>Tic Tac Toe</Text>
+      <View style={{gap: 10, width: '100%'}}>
+        <Button
+          color="#000"
+          style={Styles.button}
+          title="Start Game"
+          onPress={handleStartGame}
+        />
+        <Button
+          color="#000"
+          style={Styles.button}
+          title="Setting"
+          onPress={handleSetting}
+        />
+        <Button
+          color="#000"
+          style={Styles.button}
+          title="About Us"
+          onPress={handleAboutUs}
+        />
+      </View>
     </View>
   );
 };
