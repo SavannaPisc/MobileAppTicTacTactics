@@ -1,17 +1,17 @@
 /**
  * CPRG-303-F: Mobile Application Development
- * Group Project Phase 4: Building the App
+ * Project Phase 4: Building the App
  * Develop Team: Kevin Wong, Savanna Piscitelli
  * GitHub: https://github.com/SavannaPisc/MobileAppTicTacTactics.git
  */
 
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, Button} from 'react-native';
-import CSS from '../layout/CSS';
+import Styles from '../layout/Styles';
 
 const Game = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
-  const [isXNext, setIsXNext] = useState(true);
+  const [whoIsNext, setWhoIsNext] = useState(true);
 
   const calculateWinner = squares => {
     const lines = [
@@ -35,7 +35,6 @@ const Game = () => {
         return squares[a];
       }
     }
-
     return null;
   };
 
@@ -45,21 +44,21 @@ const Game = () => {
     }
 
     const newBoard = board.slice();
-    newBoard[index] = isXNext ? 'X' : 'O';
+    newBoard[index] = whoIsNext ? 'X' : 'O';
 
     setBoard(newBoard);
-    setIsXNext(!isXNext);
+    setWhoIsNext(!whoIsNext);
   };
 
   const renderSquare = index => (
-    <TouchableOpacity style={CSS.square} onPress={() => handleClick(index)}>
-      <Text style={CSS.squareText}>{board[index]}</Text>
+    <TouchableOpacity style={Styles.square} onPress={() => handleClick(index)}>
+      <Text style={Styles.squareText}>{board[index]}</Text>
     </TouchableOpacity>
   );
 
   const handleRestart = () => {
     setBoard(Array(9).fill(null));
-    setIsXNext(true);
+    setWhoIsNext(true);
   };
 
   const winner = calculateWinner(board);
@@ -67,26 +66,26 @@ const Game = () => {
   const showRestartButton = winner || isBoardFull;
 
   const status = winner
-    ? `Winner: ${winner}`
+    ? `${winner} Wins`
     : isBoardFull
     ? 'Game tied'
-    : `Next player: ${isXNext ? 'X' : 'O'}`;
+    : `Now is: ${whoIsNext ? 'X' : 'O'}`;
 
   return (
-    <View style={CSS.container}>
-      <Text style={CSS.status}>{status}</Text>
-      <View style={CSS.board}>
-        <View style={CSS.row}>
+    <View style={Styles.container}>
+      <Text style={Styles.status}>{status}</Text>
+      <View style={Styles.board}>
+        <View style={Styles.row}>
           {renderSquare(0)}
           {renderSquare(1)}
           {renderSquare(2)}
         </View>
-        <View style={CSS.row}>
+        <View style={Styles.row}>
           {renderSquare(3)}
           {renderSquare(4)}
           {renderSquare(5)}
         </View>
-        <View style={CSS.row}>
+        <View style={Styles.row}>
           {renderSquare(6)}
           {renderSquare(7)}
           {renderSquare(8)}
@@ -96,8 +95,7 @@ const Game = () => {
         <Button
           title="Restart Game"
           onPress={handleRestart}
-          style={CSS.restartButton}
-          titleStyle={CSS.restartButtonText}
+          style={Styles.button}
         />
       )}
     </View>
