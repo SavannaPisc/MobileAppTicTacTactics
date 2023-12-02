@@ -1,7 +1,7 @@
 /**
  * CPRG-303-F: Mobile Application Development
  * Group Project Phase 4: Building the App
- * Develop Team: Kevin Wong, Savanna Piscitelli
+ * Development Team: Kevin Wong, Savanna Piscitelli
  * GitHub: https://github.com/SavannaPisc/MobileAppTicTacTactics.git
  */
 

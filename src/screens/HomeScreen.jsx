@@ -1,7 +1,7 @@
 /**
  * CPRG-303-F: Mobile Application Development
- * Project Phase 4: Building the App
- * Develop Team: Kevin Wong, Savanna Piscitelli
+ * Group Project Phase 4: Building the App
+ * Development Team: Kevin Wong, Savanna Piscitelli
  * GitHub: https://github.com/SavannaPisc/MobileAppTicTacTactics.git
  */
 
@@ -27,19 +27,16 @@ const HomeScreen = ({navigation}) => {
       <Text style={Styles.title}>Tic Tac Toe</Text>
       <View style={{gap: 10, width: '100%'}}>
         <Button
-          color="#000"
           style={Styles.button}
           title="Start Game"
           onPress={handleStartGame}
         />
         <Button
-          color="#000"
           style={Styles.button}
           title="Settings"
           onPress={handleSetting}
         />
         <Button
-          color="#000"
           style={Styles.button}
           title="About Us"
           onPress={handleAboutUs}
