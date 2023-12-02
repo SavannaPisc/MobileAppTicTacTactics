@@ -91,13 +91,11 @@ const Game = () => {
           {renderSquare(8)}
         </View>
       </View>
-      {showRestartButton && (
-        <Button
-          title="Restart Game"
-          onPress={handleRestart}
-          style={Styles.button}
-        />
-      )}
+      <View style={{margin: 20}}>
+        {showRestartButton && (
+          <Button title="Restart Game" onPress={handleRestart} />
+        )}
+      </View>
     </View>
   );
 };
