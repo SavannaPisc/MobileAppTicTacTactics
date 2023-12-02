@@ -5,16 +5,22 @@
  * GitHub: https://github.com/SavannaPisc/MobileAppTicTacTactics.git
  */
 
-import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, Button, ImageBackground} from 'react-native';
-import Styles from '../layout/Styles';
-import Background from '../res/NoShip.png';
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Button,
+  ImageBackground,
+} from "react-native";
+import Styles from "../layout/Styles";
+import Background from "../res/NoShip.png";
 
 const Game = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [whoIsNext, setWhoIsNext] = useState(true);
 
-  const calculateWinner = squares => {
+  const calculateWinner = (squares) => {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -39,19 +45,19 @@ const Game = () => {
     return null;
   };
 
-  const handleClick = index => {
+  const handleClick = (index) => {
     if (board[index] || calculateWinner(board)) {
       return;
     }
 
     const newBoard = board.slice();
-    newBoard[index] = whoIsNext ? 'X' : 'O';
+    newBoard[index] = whoIsNext ? "X" : "O";
 
     setBoard(newBoard);
     setWhoIsNext(!whoIsNext);
   };
 
-  const renderSquare = index => (
+  const renderSquare = (index) => (
     <TouchableOpacity style={Styles.square} onPress={() => handleClick(index)}>
       <Text style={Styles.squareText}>{board[index]}</Text>
     </TouchableOpacity>
@@ -63,17 +69,20 @@ const Game = () => {
   };
 
   const winner = calculateWinner(board);
-  const isBoardFull = board.every(square => square !== null);
+  const isBoardFull = board.every((square) => square !== null);
   const showRestartButton = winner || isBoardFull;
 
   const status = winner
     ? `${winner} Wins`
     : isBoardFull
-    ? 'Game tied'
-    : `Now is: ${whoIsNext ? 'X' : 'O'}`;
+    ? "Game tied"
+    : `Now is: ${whoIsNext ? "X" : "O"}`;
 
   return (
-    <ImageBackground source={Background} style={{width: '100%', height: '100%'}}>
+    <ImageBackground
+      source={Background}
+      style={{ width: "100%", height: "100%" }}
+    >
       <View style={Styles.container}>
         <Text style={Styles.status}>{status}</Text>
         <View style={Styles.board}>
@@ -93,13 +102,15 @@ const Game = () => {
             {renderSquare(8)}
           </View>
         </View>
-        {showRestartButton && (
-          <Button
-            title="Restart Game"
-            onPress={handleRestart}
-            style={Styles.button}
-          />
-        )}
+        <View style={{ margin: 20 }}>
+          {showRestartButton && (
+            <Button
+              title="Restart Game"
+              onPress={handleRestart}
+              style={Styles.button}
+            />
+          )}
+        </View>
       </View>
     </ImageBackground>
   );
