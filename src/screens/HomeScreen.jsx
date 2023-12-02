@@ -6,8 +6,11 @@
  */
 
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, ImageBackground} from 'react-native';
 import Styles from '../layout/Styles';
+import Background from '../res/Background.png'; 
+
+
 
 const HomeScreen = ({navigation}) => {
   const handleStartGame = () => {
@@ -23,29 +26,30 @@ const HomeScreen = ({navigation}) => {
   };
 
   return (
+    <ImageBackground source={Background} style={{width: '100%', height: '100%'}}>
     <View style={[Styles.container, {marginHorizontal: 20}]}>
-      <Text style={Styles.title}>Tic Tac Toe</Text>
-      <View style={{gap: 10, width: '100%'}}>
-        <Button
-          color="#000"
-          style={Styles.button}
+      <Text style={Styles.title}>Tic-Tac-Tactics</Text>
+      <View style={{marginHorizontal: 20, gap: 10}}>
+        <Button 
+          style={[Styles.button, width='100%']}
           title="Start Game"
           onPress={handleStartGame}
         />
-        <Button
-          color="#000"
-          style={Styles.button}
-          title="Settings"
-          onPress={handleSetting}
-        />
-        <Button
-          color="#000"
-          style={Styles.button}
-          title="About Us"
-          onPress={handleAboutUs}
-        />
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <Button className="shadow-sm flex min-h-[79px] flex-col rounded-3xl"
+            style={Styles.button}
+            title="Settings"
+            onPress={handleSetting}
+          />
+          <Button
+            style={Styles.button}
+            title="About Us"
+            onPress={handleAboutUs}
+          />
+        </View>
       </View>
     </View>
+    </ImageBackground>
   );
 };
 

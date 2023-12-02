@@ -6,13 +6,15 @@
  */
 
 import {StyleSheet} from 'react-native';
+import Background from '../res/Background.png'; 
 
 const Styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundImage: 'url(${Background})',
+    },
   title: {
     fontSize: 30,
     padding: 20,
@@ -42,6 +44,11 @@ const Styles = StyleSheet.create({
   squareText: {
     fontSize: 50,
   },
+  button: {
+    color: '#180CA9',
+    borderRadius: 10,
+    
+  }
 });
 
 export default Styles;
