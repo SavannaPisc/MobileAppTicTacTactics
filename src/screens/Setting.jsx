@@ -6,14 +6,17 @@
  */
 
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ImageBackground} from 'react-native';
 import Styles from '../layout/Styles';
+import Background from '../res/NoShip.png';
 
 const Setting = () => {
   return (
-    <View style={Styles.container}>
-      <Text style={Styles.text}>🚧 Building in progress 🚧</Text>
-    </View>
+    <ImageBackground source={Background} style={{width: '100%', height: '100%'}}>
+      <View style={Styles.container}>
+        <Text style={Styles.text}>🚧 Building in progress 🚧</Text>
+      </View>
+    </ImageBackground>
   );
 };
 

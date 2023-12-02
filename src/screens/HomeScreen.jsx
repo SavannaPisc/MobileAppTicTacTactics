@@ -36,7 +36,7 @@ const HomeScreen = ({navigation}) => {
           onPress={handleStartGame}
         />
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <Button className="shadow-sm flex min-h-[79px] flex-col rounded-3xl"
+          <Button className="shadow-sm flex min-h-79 flex-col rounded-3xl"
             style={Styles.button}
             title="Settings"
             onPress={handleSetting}

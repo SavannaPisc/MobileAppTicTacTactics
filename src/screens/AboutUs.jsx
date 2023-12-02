@@ -6,16 +6,19 @@
  */
 
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ImageBackground} from 'react-native';
 import Styles from '../layout/Styles';
+import Background from '../res/NoShip.png';
 
 const AboutUs = () => {
   return (
-    <View style={Styles.container}>
-      <Text style={Styles.text}>Develop Team</Text>
-      <Text style={Styles.text}>Kevin Wong, Savanna Piscitelli</Text>
-      <Text style={Styles.text}>Special Thanks: Nick Hamnett</Text>
-    </View>
+    <ImageBackground source={Background} style={{width: '100%', height: '100%'}}>
+      <View style={Styles.container}>
+        <Text style={Styles.text}>Develop Team</Text>
+        <Text style={Styles.text}>Kevin Wong, Savanna Piscitelli</Text>
+        <Text style={Styles.text}>Special Thanks: Nick Hamnett</Text>
+      </View>
+    </ImageBackground>
   );
 };
 

@@ -6,8 +6,9 @@
  */
 
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, Button} from 'react-native';
+import {View, Text, TouchableOpacity, Button, ImageBackground} from 'react-native';
 import Styles from '../layout/Styles';
+import Background from '../res/NoShip.png';
 
 const Game = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -72,33 +73,35 @@ const Game = () => {
     : `Now is: ${whoIsNext ? 'X' : 'O'}`;
 
   return (
-    <View style={Styles.container}>
-      <Text style={Styles.status}>{status}</Text>
-      <View style={Styles.board}>
-        <View style={Styles.row}>
-          {renderSquare(0)}
-          {renderSquare(1)}
-          {renderSquare(2)}
+    <ImageBackground source={Background} style={{width: '100%', height: '100%'}}>
+      <View style={Styles.container}>
+        <Text style={Styles.status}>{status}</Text>
+        <View style={Styles.board}>
+          <View style={Styles.row}>
+            {renderSquare(0)}
+            {renderSquare(1)}
+            {renderSquare(2)}
+          </View>
+          <View style={Styles.row}>
+            {renderSquare(3)}
+            {renderSquare(4)}
+            {renderSquare(5)}
+          </View>
+          <View style={Styles.row}>
+            {renderSquare(6)}
+            {renderSquare(7)}
+            {renderSquare(8)}
+          </View>
         </View>
-        <View style={Styles.row}>
-          {renderSquare(3)}
-          {renderSquare(4)}
-          {renderSquare(5)}
-        </View>
-        <View style={Styles.row}>
-          {renderSquare(6)}
-          {renderSquare(7)}
-          {renderSquare(8)}
-        </View>
+        {showRestartButton && (
+          <Button
+            title="Restart Game"
+            onPress={handleRestart}
+            style={Styles.button}
+          />
+        )}
       </View>
-      {showRestartButton && (
-        <Button
-          title="Restart Game"
-          onPress={handleRestart}
-          style={Styles.button}
-        />
-      )}
-    </View>
+    </ImageBackground>
   );
 };
 

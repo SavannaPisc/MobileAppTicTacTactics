@@ -6,30 +6,37 @@
  */
 
 import {StyleSheet} from 'react-native';
-import Background from '../res/Background.png'; 
 
 const Styles = StyleSheet.create({
     container: {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundImage: 'url(${Background})',
     },
   title: {
-    fontSize: 30,
+    fontSize: 40,
     padding: 20,
+    marginBottom: 30,
+    fontFamily: 'Jockey-One-Regular',
+    color: '#FFFFFF',
   },
   text: {
     fontSize: 20,
     textAlign: 'center',
     marginHorizontal: 20,
+    marginBottom: 40,
+    shadowColor: '#000000',
+    color: '#FFFFFF',
   },
   status: {
     marginBottom: 10,
     fontSize: 20,
+    color: '#FFFFFF',
   },
   board: {
     borderWidth: 1,
+    backgroundColor: '#180CA9',
+    borderRadius: 30,
   },
   row: {
     flexDirection: 'row',
@@ -43,6 +50,7 @@ const Styles = StyleSheet.create({
   },
   squareText: {
     fontSize: 50,
+    color: '#FFFFFF',
   },
   button: {
     color: '#180CA9',
