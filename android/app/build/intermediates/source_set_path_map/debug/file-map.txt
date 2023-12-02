@@ -41,3 +41,4 @@ com.gp4_tictactoegame.app-main-39 C:\Users\Savanna\Documents\2023-2024 SAIT\Fall
 com.gp4_tictactoegame.app-packaged_res-40 C:\Users\Savanna\Documents\2023-2024 SAIT\Fall\CPRG-303\AndroidProjects\MobileAppTicTacTactics\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug
 com.gp4_tictactoegame.app-packaged_res-41 C:\Users\Savanna\Documents\2023-2024 SAIT\Fall\CPRG-303\AndroidProjects\MobileAppTicTacTactics\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
 com.gp4_tictactoegame.app-packaged_res-42 C:\Users\Savanna\Documents\2023-2024 SAIT\Fall\CPRG-303\AndroidProjects\MobileAppTicTacTactics\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
+com.gp4_tictactoegame.app-packaged_res-43 C:\Users\Savanna\Documents\2023-2024 SAIT\Fall\CPRG-303\AndroidProjects\MobileAppTicTacTactics\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug
